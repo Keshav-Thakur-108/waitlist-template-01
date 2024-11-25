@@ -1,3 +1,5 @@
+"use client"
+
 import WaitlistForm from '@/components/WaitlistForm'
 import { Badge } from "@/components/ui/badge"
 import { Chrome, Twitter } from 'lucide-react'
@@ -66,15 +68,6 @@ export default function Home() {
           Get concise insights, extract key points, and navigate content effortlessly - all with a single click.
         </motion.p>
 
-        <motion.div 
-          className="flex items-center justify-center space-x-4 mb-8"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-        >
-          <Chrome className="w-8 h-8 text-blue-400" />
-          <p className="text-lg font-semibold">Chrome Extension</p>
-        </motion.div>
 
         <motion.p 
           className="text-lg mb-8 text-gray-300"
