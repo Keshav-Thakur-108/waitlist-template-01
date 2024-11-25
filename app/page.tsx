@@ -1,101 +1,75 @@
-import Image from "next/image";
+import WaitlistForm from '@/components/WaitlistForm'
+import { Badge } from "@/components/ui/badge"
+import { Chrome, Twitter } from 'lucide-react'
+import { CustomToaster } from "@/components/ui/custom-toaster"
+import { Toaster } from "@/components/ui/toaster"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="stars-container absolute inset-0">
+          {[...Array(50)].map((_, i) => (
+            <div
+              key={i}
+              className="star absolute w-0.5 h-0.5 bg-white rounded-full animate-twinkle"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+              }}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          ))}
+        </div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen text-center">
+        <Badge variant="secondary" className="mb-8 bg-white/10 text-white hover:bg-white/20">
+          Coming Soon!
+        </Badge>
+
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+          AI-Powered Web Summarizer
+        </h1>
+
+        <p className="text-lg md:text-xl text-gray-400 mb-4 max-w-2xl">
+          Instantly summarize any webpage with our Chrome extension. Save time and boost productivity with AI-generated summaries in your browser's side panel.
+        </p>
+
+        <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl">
+          Get concise insights, extract key points, and navigate content effortlessly - all with a single click.
+        </p>
+
+        <div className="flex items-center justify-center space-x-4 mb-8">
+          <Chrome className="w-8 h-8" />
+          <p className="text-lg font-semibold">Chrome Extension</p>
+        </div>
+
+        <p className="text-lg mb-8">
+          Be the first to know when we launch! Join our waitlist for early access and exclusive updates.
+        </p>
+
+        <WaitlistForm />
+
+        <div className="mt-8 text-gray-400">
+          For updates and sneak peeks, follow us on{" "}
+          <a href="https://twitter.com" className="text-white hover:text-gray-300 inline-flex items-center">
+            <Twitter className="h-4 w-4 mr-1" />
+            Twitter
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <footer className="absolute bottom-4 left-0 right-0 text-center text-sm text-gray-400">
+          <div className="mb-2">© 2024 AI Summarizer. All rights reserved.</div>
+          <div className="space-x-4">
+            <a href="#" className="hover:text-white">Privacy Policy</a>
+            <a href="#" className="hover:text-white">Terms of Service</a>
+          </div>
+        </footer>
+      </div>
+      <CustomToaster />
+      <Toaster />
     </div>
-  );
+  )
 }
+
