@@ -28,7 +28,7 @@ export default function WaitlistForm() {
   return (
     <motion.form 
       onSubmit={onSubmit} 
-      className="w-full max-w-md space-y-4"
+      className="w-full max-w-md space-y-4 mx-auto" 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.8, duration: 0.5 }}
@@ -36,12 +36,12 @@ export default function WaitlistForm() {
       <Input
         type="email"
         placeholder="Your Email Address"
-        className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-blue-400 transition-all duration-200"
+        className="-translate-y-10 bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-blue-400 transition-all duration-200"
         required
       />
       <Button 
         type="submit" 
-        className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+        className="-translate-y-10 w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
         disabled={loading}
       >
         {loading ? (
