@@ -3,7 +3,6 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
   authDomain: "ai-summarizer-waitlist.firebaseapp.com",
   databaseURL: "https://ai-summarizer-waitlist-default-rtdb.firebaseio.com",
   projectId: "ai-summarizer-waitlist",
