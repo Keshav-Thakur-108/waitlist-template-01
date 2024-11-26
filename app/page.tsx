@@ -42,7 +42,7 @@ export default function Home() {
             <WaitlistForm />
             <div className="text-gray-400">
               For updates and sneak peeks, follow us on{" "}
-              <a href="https://twitter.com" className="text-blue-400 hover:text-blue-300 inline-flex items-center transition-colors duration-200">
+              <a href="https://x.com/Keshav__Thakur_" className="text-blue-400 hover:text-blue-300 inline-flex items-center transition-colors duration-200">
           
                 X
               </a>
