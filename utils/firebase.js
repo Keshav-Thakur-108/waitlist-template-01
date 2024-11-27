@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-require('dotenv').config();
 
+console.log(process.env.PROJECT_ID_TEST);
 // Your web app's Firebase configuration
 const firebaseConfig = {
   authDomain: process.env.AUTH_DOMAIN,
@@ -9,9 +9,8 @@ const firebaseConfig = {
   projectId: process.env.PROJECT_ID,
   storageBucket: process.env.STORAGE_BUCKET,
   messagingSenderId: process.env.SENDER_ID,
-  appId: process.env.APP_ID,  
-  apiKey: process.env.API_KEY,
-  measurementId: process.env.MEASUREMENT_ID
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID 
 };
 
 // Initialize Firebase
