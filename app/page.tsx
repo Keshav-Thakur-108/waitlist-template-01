@@ -1,7 +1,6 @@
 import { Suspense } from 'react'
 import WaitlistForm from '@/components/WaitlistForm'
 import { Badge } from "@/components/ui/badge"
-import { Twitter, X } from 'lucide-react'
 import { CustomToaster } from "@/components/ui/custom-toaster"
 import AnimatedBackground from '@/components/AnimatedBackground'
 import AnimatedContent from '@/components/AnimatedContent'
