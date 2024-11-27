@@ -27,7 +27,7 @@ export default function Home() {
             </h1>
 
             <p className="-translate-y-10 text-lg md:text-xl text-gray-300 mb-4 max-w-2xl mx-auto">
-              Instantly summarize any webpage with our Chrome extension. Save time and boost productivity with AI-generated summaries in your browser's side panel.
+              Instantly summarize any webpage with our Chrome extension. Save time and boost productivity with AI-generated summaries in your browser&apos;s side panel.
             </p>
 
             <p className="-translate-y-10 text-lg md:text-xl text-gray-300 mb-4 max-w-xl mx-auto">
