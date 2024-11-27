@@ -1,15 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+require('dotenv').config();
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  authDomain: "ai-summarizer-waitlist.firebaseapp.com",
-  databaseURL: "https://ai-summarizer-waitlist-default-rtdb.firebaseio.com",
-  projectId: "ai-summarizer-waitlist",
-  storageBucket: "ai-summarizer-waitlist.firebasestorage.app",
-  messagingSenderId: "615358460328",
-  appId: "1:615358460328:web:8fcbcc0df436a326a96d9d",
-  measurementId: "G-9P3TV5GJR9"
+  authDomain: process.env.AUTH_DOMAIN,
+  databaseURL: process.env.DATABASE_URL,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.SENDER_ID,
+  appId: process.env.APP_ID,  
+  apiKey: process.env.API_KEY,
+  measurementId: process.env.MEASUREMENT_ID
 };
 
 // Initialize Firebase
