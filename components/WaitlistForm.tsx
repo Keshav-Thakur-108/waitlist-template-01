@@ -52,7 +52,7 @@ export default function WaitlistForm() {
         console.log("Document written with ID: ", docRef.id);
         toast({
           title: "You're on the list!",
-          description: "We'll notify you when the Chappie launches. 🎉",
+          description: "We'll notify you when Chappie launches. 🎉",
         });
       }
       setData({ email: "" });
